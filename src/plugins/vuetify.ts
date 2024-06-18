@@ -1,6 +1,8 @@
-import '@mdi/font/css/materialdesignicons.css'
-import 'vuetify/styles'
-import { createVuetify, ThemeDefinition } from 'vuetify'
+import '@mdi/font/css/materialdesignicons.css';
+import 'vuetify/styles';
+import * as components from 'vuetify/components';
+import * as directives from 'vuetify/directives';
+import { createVuetify, ThemeDefinition } from 'vuetify';
 
 const customTheme: ThemeDefinition = {
   dark: false,
@@ -16,13 +18,15 @@ const customTheme: ThemeDefinition = {
     success: '#4CAF50',
     warning: '#FB8C00',
   },
-}
+};
 
 export default createVuetify({
+  components,
+  directives,
   theme: {
     defaultTheme: 'customTheme',
     themes: {
-      customTheme
-    }
+      customTheme,
+    },
   },
-})
+});
