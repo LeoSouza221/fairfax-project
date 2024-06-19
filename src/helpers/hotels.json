@@ -1,5 +1,7 @@
 [
   {
+    "available_rooms": 10,
+    "price": 1000,
     "hotel_id": 1,
     "chain_id": 421,
     "chain_name": "Samed Resorts Group",
@@ -41,6 +43,8 @@
     "rates_currency": "USD"
   },
   {
+    "available_rooms": 5,
+    "price": 600,
     "hotel_id": 6,
     "chain_id": 0,
     "chain_name": "No chain",
@@ -82,6 +86,8 @@
     "rates_currency": "USD"
   },
   {
+    "available_rooms": 2,
+    "price": 345,
     "hotel_id": 10,
     "chain_id": 29,
     "chain_name": "Melia Hotels International",
@@ -123,6 +129,8 @@
     "rates_currency": "USD"
   },
   {
+    "available_rooms": 76,
+    "price": 250,
     "hotel_id": 13,
     "chain_id": 227,
     "chain_name": "NH Hotels",
@@ -164,6 +172,8 @@
     "rates_currency": "USD"
   },
   {
+    "available_rooms": 2,
+    "price": 450,
     "hotel_id": 15,
     "chain_id": 21,
     "chain_name": "Marriott",
@@ -205,6 +215,8 @@
     "rates_currency": "USD"
   },
   {
+    "available_rooms": 35,
+    "price": 1200,
     "hotel_id": 16,
     "chain_id": 496,
     "chain_name": "HK CTS Hotels",
@@ -246,6 +258,8 @@
     "rates_currency": "USD"
   },
   {
+    "available_rooms": 43,
+    "price": 233,
     "hotel_id": 17,
     "chain_id": 0,
     "chain_name": "No chain",
@@ -287,6 +301,8 @@
     "rates_currency": "USD"
   },
   {
+    "available_rooms": 4,
+    "price": 763,
     "hotel_id": 18,
     "chain_id": 0,
     "chain_name": "No chain",
@@ -328,6 +344,8 @@
     "rates_currency": "USD"
   },
   {
+    "available_rooms": 5,
+    "price": 437,
     "hotel_id": 25,
     "chain_id": 2688,
     "chain_name": "Skycity",
@@ -369,6 +387,8 @@
     "rates_currency": "USD"
   },
   {
+    "available_rooms": 23,
+    "price": 543,
     "hotel_id": 33,
     "chain_id": 3,
     "chain_name": "Accor Hotels",
@@ -410,6 +430,8 @@
     "rates_currency": "USD"
   },
   {
+    "available_rooms": 21,
+    "price": 865,
     "hotel_id": 34,
     "chain_id": 0,
     "chain_name": "No chain",
@@ -451,6 +473,8 @@
     "rates_currency": "USD"
   },
   {
+    "available_rooms": 8,
+    "price": 5423,
     "hotel_id": 36,
     "chain_id": 0,
     "chain_name": "No chain",
@@ -492,6 +516,8 @@
     "rates_currency": "USD"
   },
   {
+    "available_rooms": 10,
+    "price": 3344,
     "hotel_id": 37,
     "chain_id": 0,
     "chain_name": "No chain",
@@ -533,6 +559,8 @@
     "rates_currency": "USD"
   },
   {
+    "available_rooms": 5,
+    "price": 2233,
     "hotel_id": 38,
     "chain_id": 0,
     "chain_name": "No chain",
@@ -574,6 +602,8 @@
     "rates_currency": "USD"
   },
   {
+    "available_rooms": 12,
+    "price": 982,
     "hotel_id": 54,
     "chain_id": 0,
     "chain_name": "No chain",
@@ -615,6 +645,8 @@
     "rates_currency": "USD"
   },
   {
+    "available_rooms": 24,
+    "price": 1442,
     "hotel_id": 59,
     "chain_id": 311,
     "chain_name": "Tokyu Hotels",
@@ -656,6 +688,8 @@
     "rates_currency": "USD"
   },
   {
+    "available_rooms": 9,
+    "price": 666,
     "hotel_id": 63,
     "chain_id": 0,
     "chain_name": "No chain",
@@ -697,6 +731,8 @@
     "rates_currency": "USD"
   },
   {
+    "available_rooms": 7,
+    "price": 2234,
     "hotel_id": 66,
     "chain_id": 0,
     "chain_name": "No chain",
@@ -738,6 +774,8 @@
     "rates_currency": "USD"
   },
   {
+    "available_rooms": 1,
+    "price": 10000,
     "hotel_id": 69,
     "chain_id": 14,
     "chain_name": "Hilton Worldwide",
@@ -779,6 +817,8 @@
     "rates_currency": "USD"
   },
   {
+    "available_rooms": 10,
+    "price": 1000,
     "hotel_id": 71,
     "chain_id": 0,
     "chain_name": "No chain",
@@ -820,6 +860,8 @@
     "rates_currency": "USD"
   },
   {
+    "available_rooms": 9,
+    "price": 644,
     "hotel_id": 75,
     "chain_id": 74,
     "chain_name": "Caesars Entertainment Corporation",
@@ -861,6 +903,8 @@
     "rates_currency": "USD"
   },
   {
+    "available_rooms": 4,
+    "price": 2356,
     "hotel_id": 78,
     "chain_id": 161,
     "chain_name": "Hoteles Catalonia",
@@ -902,6 +946,8 @@
     "rates_currency": "USD"
   },
   {
+    "available_rooms": 7,
+    "price": 443,
     "hotel_id": 85,
     "chain_id": 252,
     "chain_name": "Prince Hotels",
@@ -943,6 +989,8 @@
     "rates_currency": "USD"
   },
   {
+    "available_rooms": 9,
+    "price": 2234,
     "hotel_id": 94,
     "chain_id": 0,
     "chain_name": "No chain",
@@ -984,6 +1032,8 @@
     "rates_currency": "USD"
   },
   {
+    "available_rooms": 6,
+    "price": 832,
     "hotel_id": 97,
     "chain_id": 307,
     "chain_name": "Thistle & Guoman",
@@ -1025,6 +1075,8 @@
     "rates_currency": "USD"
   },
   {
+    "available_rooms": 4,
+    "price": 877,
     "hotel_id": 99,
     "chain_id": 0,
     "chain_name": "No chain",
@@ -1066,6 +1118,8 @@
     "rates_currency": "USD"
   },
   {
+    "available_rooms": 8,
+    "price": 367,
     "hotel_id": 102,
     "chain_id": 193,
     "chain_name": "Leading Hotels of the World",
@@ -1107,6 +1161,8 @@
     "rates_currency": "USD"
   },
   {
+    "available_rooms": 7,
+    "price": 332,
     "hotel_id": 103,
     "chain_id": 241,
     "chain_name": "Park Hotels",
@@ -1148,6 +1204,8 @@
     "rates_currency": "USD"
   },
   {
+    "available_rooms": 5,
+    "price": 2499,
     "hotel_id": 107,
     "chain_id": 16,
     "chain_name": "InterContinental Hotels Group",
@@ -1189,6 +1247,8 @@
     "rates_currency": "USD"
   },
   {
+    "available_rooms": 2,
+    "price": 123,
     "hotel_id": 109,
     "chain_id": 661,
     "chain_name": "Sotetsu Fresa Inn",
@@ -1230,6 +1290,8 @@
     "rates_currency": "USD"
   },
   {
+    "available_rooms": 2,
+    "price": 210,
     "hotel_id": 122,
     "chain_id": 307,
     "chain_name": "Thistle & Guoman",
@@ -1271,6 +1333,8 @@
     "rates_currency": "USD"
   },
   {
+    "available_rooms": 34,
+    "price": 235,
     "hotel_id": 123,
     "chain_id": 0,
     "chain_name": "No chain",
@@ -1312,6 +1376,8 @@
     "rates_currency": "USD"
   },
   {
+    "available_rooms": 7,
+    "price": 6400,
     "hotel_id": 124,
     "chain_id": 94,
     "chain_name": "Corinthia Hotels International",
@@ -1353,6 +1419,8 @@
     "rates_currency": "USD"
   },
   {
+    "available_rooms": 10,
+    "price": 1980,
     "hotel_id": 127,
     "chain_id": 911,
     "chain_name": "Blue Sea Hotels & Resorts",
@@ -1394,6 +1462,8 @@
     "rates_currency": "USD"
   },
   {
+    "available_rooms": 2,
+    "price": 213,
     "hotel_id": 130,
     "chain_id": 16,
     "chain_name": "InterContinental Hotels Group",
@@ -1435,6 +1505,8 @@
     "rates_currency": "USD"
   },
   {
+    "available_rooms": 23,
+    "price": 414,
     "hotel_id": 131,
     "chain_id": 229,
     "chain_name": "Oberoi Hotels & Resorts",
@@ -1476,6 +1548,8 @@
     "rates_currency": "USD"
   },
   {
+    "available_rooms": 2,
+    "price": 544,
     "hotel_id": 132,
     "chain_id": 0,
     "chain_name": "No chain",
@@ -1517,6 +1591,8 @@
     "rates_currency": "USD"
   },
   {
+    "available_rooms": 11,
+    "price": 1001,
     "hotel_id": 135,
     "chain_id": 0,
     "chain_name": "No chain",
@@ -1558,6 +1634,8 @@
     "rates_currency": "USD"
   },
   {
+    "available_rooms": 12,
+    "price": 432,
     "hotel_id": 136,
     "chain_id": 750,
     "chain_name": "Daiwa Royal Hotel",
@@ -1599,6 +1677,8 @@
     "rates_currency": "USD"
   },
   {
+    "available_rooms": 3,
+    "price": 80,
     "hotel_id": 138,
     "chain_id": 0,
     "chain_name": "No chain",
@@ -1640,6 +1720,8 @@
     "rates_currency": "USD"
   },
   {
+    "available_rooms": 11,
+    "price": 2040,
     "hotel_id": 140,
     "chain_id": 0,
     "chain_name": "No chain",
@@ -1681,6 +1763,8 @@
     "rates_currency": "USD"
   },
   {
+    "available_rooms": 16,
+    "price": 1991,
     "hotel_id": 141,
     "chain_id": 0,
     "chain_name": "",
@@ -1722,6 +1806,8 @@
     "rates_currency": "USD"
   },
   {
+    "available_rooms": 65,
+    "price": 569,
     "hotel_id": 146,
     "chain_id": 0,
     "chain_name": "No chain",
@@ -1763,6 +1849,8 @@
     "rates_currency": "USD"
   },
   {
+    "available_rooms": 33,
+    "price": 2111,
     "hotel_id": 147,
     "chain_id": 0,
     "chain_name": "No chain",
@@ -1804,6 +1892,8 @@
     "rates_currency": "USD"
   },
   {
+    "available_rooms": 10,
+    "price": 609,
     "hotel_id": 149,
     "chain_id": 21,
     "chain_name": "Marriott",
@@ -1845,6 +1935,8 @@
     "rates_currency": "USD"
   },
   {
+    "available_rooms": 17,
+    "price": 170,
     "hotel_id": 150,
     "chain_id": 16,
     "chain_name": "InterContinental Hotels Group",
@@ -1886,6 +1978,8 @@
     "rates_currency": "USD"
   },
   {
+    "available_rooms": 13,
+    "price": 800,
     "hotel_id": 151,
     "chain_id": 0,
     "chain_name": "No chain",

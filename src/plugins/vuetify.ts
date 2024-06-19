@@ -11,7 +11,7 @@ const customTheme: ThemeDefinition = {
     surface: '#FFFFFF',
     primary: '#6200EE',
     'primary-darken-1': '#3700B3',
-    secondary: '#FFE0B26',
+    secondary: '#FFE0B2',
     'secondary-darken-1': '#F57C00',
     error: '#B00020',
     info: '#2196F3',

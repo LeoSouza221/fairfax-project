@@ -9,7 +9,7 @@
       <v-text-field
         v-model="filters.bedrooms"
         label="Quartos"
-        variant="solo"
+        variant="outlined"
         color="primary"
         density="compact"
       ></v-text-field>
@@ -23,7 +23,7 @@
       <v-text-field
         v-model="filters.bedrooms"
         label="Quartos"
-        variant="solo"
+        variant="outlined"
         color="primary"
         density="compact"
       ></v-text-field>
@@ -37,7 +37,7 @@
         v-model="filters.bedrooms"
         type="number"
         label="Quartos"
-        variant="solo"
+        variant="outlined"
         color="primary"
         density="compact"
       ></v-text-field>
@@ -51,7 +51,7 @@
         v-model="filters.guests"
         type="number"
         label="Hospedes"
-        variant="solo"
+        variant="outlined"
         color="primary"
         density="compact"
       ></v-text-field>

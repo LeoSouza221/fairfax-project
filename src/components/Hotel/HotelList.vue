@@ -1,33 +1,94 @@
 <template>
   <v-container>
-    <v-list lines="two">
-      <v-list-item
-        v-for="hotel in hotelsList"
-        :key="hotel.hotel_id"
-        :title="hotel.hotel_name"
-      >
-        <template v-slot:prepend>
-          <v-avatar color="grey-lighten-1">
-            <v-icon color="white">mdi-folder</v-icon>
-          </v-avatar>
-        </template>
+    <v-card
+      v-for="hotel in hotelsList"
+      :key="hotel.hotel_id"
+      class="my-4"
+      color="primary"
+      rounded="lg"
+      variant="outlined"
+    >
+      <v-row no-gutters>
+        <v-col
+          cols="12"
+          md="2"
+          class="d-flex justify-center align-center"
+        >
+          <v-img
+            cover
+            :height="name === 'xs' || name === 'sm' ? '120' : '80'"
+            :aspect-ratio="1"
+            :src="hotel.photo1"
+          />
+        </v-col>
+        <v-col
+          cols="12"
+          md="8"
+          class="d-flex"
+        >
+          <v-row no-gutters>
+            <v-col
+              cols="12"
+              class="px-2"
+            >
+              <span class="text-h6">{{ hotel.hotel_name }}</span>
+            </v-col>
 
-        <template v-slot:subtitle>
-          <span>Quartos: {{ hotel.numberrooms }}</span>
-        </template>
-
-        <template v-slot:append>
-          <span>{{ hotel.chain_id }}</span>
-        </template>
-      </v-list-item>
-    </v-list>
+            <v-row no-gutters>
+              <v-col
+                cols="12"
+                md="4"
+                class="px-2"
+              >
+                <span class="text-subtitle-2 text-primary">
+                  Cidade:
+                  <span class="font-weight-light">{{ hotel.city ?? '' }}</span>
+                </span>
+              </v-col>
+              <v-col
+                cols="12"
+                md="4"
+                class="px-2"
+              >
+                <span class="text-subtitle-2 text-primary">
+                  Avaliações:
+                  <span class="font-weight-light">{{ hotel.number_of_reviews ?? '' }}</span>
+                </span>
+              </v-col>
+              <v-col
+                cols="12"
+                md="4"
+                class="px-2"
+              >
+                <v-rating
+                  v-model="hotel.star_rating"
+                  density="compact"
+                  color="secondary-darken-1"
+                />
+              </v-col>
+            </v-row>
+          </v-row>
+        </v-col>
+        <v-col
+          cols="12"
+          md="2"
+          class="d-flex justify-center align-center"
+        >
+          <span class="text-h6">{{ getMoneyFormat(hotel.price) }}</span>
+        </v-col>
+      </v-row>
+    </v-card>
   </v-container>
 </template>
 
 <script setup lang="ts">
+import { useDisplay } from 'vuetify';
+import { getMoneyFormat } from '@/helpers/moneyFormat';
 import hotels from '@/helpers/hotels.json';
 
 interface Hotel {
+  price: number;
+  available_rooms: number;
   hotel_id: number;
   chain_id: number;
   chain_name: string;
@@ -69,9 +130,8 @@ interface Hotel {
   rates_currency: string;
 }
 
-console.log(typeof hotels);
-
 const hotelsList: Hotel[] = hotels;
+const { name } = useDisplay();
 </script>
 
 <style module lang="postcss">
