@@ -1,9 +1,15 @@
 <template>
   <v-container>
-    <HotelDetail
+    <HotelModalDetail
       v-model="detailModalIsOpen"
       :hotel="selectedHotel"
     />
+    <v-snackbar
+      v-model="alertIsOpen"
+      color="primary"
+    >
+      {{ alertMessage }}
+    </v-snackbar>
     <div
       v-for="hotel in hotelsList"
       :key="hotel.hotel_id"
@@ -11,6 +17,7 @@
     >
       <div class="position-absolute button-position">
         <v-tooltip
+          v-if="!store.comparationIdList.includes(hotel.hotel_id)"
           location="top"
           text="Adicionar à comparação"
         >
@@ -18,8 +25,26 @@
             <v-btn
               v-bind="props"
               icon="mdi-plus"
+              color="secondary-darken-1"
+              density="comfortable"
+              :disabled="loading"
+              @click="checkLengthAndAddHotel(hotel)"
+            ></v-btn>
+          </template>
+        </v-tooltip>
+        <v-tooltip
+          v-else
+          location="top"
+          text="Remover da comparação"
+        >
+          <template v-slot:activator="{ props }">
+            <v-btn
+              v-bind="props"
+              icon="mdi-minus"
               color="primary"
               density="comfortable"
+              :disabled="loading"
+              @click="checkPositionAndRemoveHotel(hotel)"
             ></v-btn>
           </template>
         </v-tooltip>
@@ -113,16 +138,53 @@ import { useDisplay } from 'vuetify';
 import { getMoneyFormat } from '@/helpers/moneyFormat';
 import type { Hotel } from '@/@types';
 import hotels from '@/helpers/hotels.json';
+import { useHotelStore } from '@/stores/hotel';
+import { storeToRefs } from 'pinia';
+
+const store = useHotelStore();
+const { addHotelToComparation, removeHotelToComparation } = store;
+const { hotelComparationList } = storeToRefs(store);
 
 const { name } = useDisplay();
+
 const hotelsList: Hotel[] = hotels;
 const detailModalIsOpen = ref(false);
+const alertIsOpen = ref(false);
+const loading = ref(false);
+const alertMessage = ref('');
 let selectedHotel = reactive<Hotel>({});
 
 const setHotelDetailAndOpenModal = (hotel: Hotel) => {
   selectedHotel = hotel;
 
   detailModalIsOpen.value = true;
+};
+
+const checkLengthAndAddHotel = (hotel: Hotel) => {
+  loading.value = true;
+  addHotelToComparation(hotel)
+    .then(() => {
+      alertMessage.value = 'Adiciona a lista de comparação';
+      alertIsOpen.value = true;
+    })
+    .catch(() => {
+      alertMessage.value = 'Lista de comparação está cheia (máximo 4)';
+      alertIsOpen.value = true;
+    })
+    .finally(() => (loading.value = false));
+};
+
+const checkPositionAndRemoveHotel = (hotel: Hotel) => {
+  const position = hotelComparationList.value.findIndex((hotelItem: Hotel) => {
+    return hotelItem.hotel_id === hotel.hotel_id;
+  });
+
+  if (position >= 0) {
+    removeHotelToComparation(position);
+
+    alertMessage.value = 'Item removido com sucesso';
+    alertIsOpen.value = true;
+  }
 };
 </script>
 
