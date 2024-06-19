@@ -21,24 +21,11 @@
       <v-text-field
         v-model="filters.bedrooms"
         label="Quartos"
-        variant="outlined"
-        color="primary"
-        density="compact"
-      ></v-text-field>
-    </v-col>
-    <v-col
-      lg="2"
-      md="6"
-      cols="12"
-    >
-      <v-text-field
-        v-model="filters.minPrice"
         type="number"
-        label="Preço Mínimo"
         variant="outlined"
         color="primary"
         density="compact"
-        prefix="R$"
+        :min="0"
       ></v-text-field>
     </v-col>
     <v-col
@@ -46,15 +33,20 @@
       md="6"
       cols="12"
     >
-      <v-text-field
+      <CurrencyInput
         v-model="filters.maxPrice"
-        type="number"
+        label="Preço Mínimo"
+      ></CurrencyInput>
+    </v-col>
+    <v-col
+      lg="2"
+      md="6"
+      cols="12"
+    >
+      <CurrencyInput
+        v-model="filters.maxPrice"
         label="Preço Máximo"
-        variant="outlined"
-        color="primary"
-        density="compact"
-        prefix="R$"
-      ></v-text-field>
+      ></CurrencyInput>
     </v-col>
     <v-col
       cols="12"

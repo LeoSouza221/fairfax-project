@@ -5,7 +5,11 @@
   >
     <v-card max-width="400">
       <v-card-title class="text-primary d-flex justify-space-between align-center">
-        {{ hotel.hotel_name }}
+        <div class="d-inline-block text-truncate">
+          <h3>
+            {{ hotel.hotel_name }}
+          </h3>
+        </div>
         <v-btn
           icon="mdi-close"
           variant="text"
@@ -50,6 +54,7 @@
               :model-value="hotel.star_rating"
               density="compact"
               color="secondary-darken-1"
+              disabled
             />
           </v-col>
           <v-col

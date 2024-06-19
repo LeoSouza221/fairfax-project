@@ -1,11 +1,7 @@
 <template>
   <v-container>
     <v-responsive>
-      <v-img
-        class="mb-4"
-        height="150"
-        src="@/assets/logo.png"
-      />
+      <h1 class="text-center text-secondary-darken-1">Encontre os melhores hotéis do mundo</h1>
 
       <div class="py-4" />
 

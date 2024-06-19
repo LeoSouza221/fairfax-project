@@ -86,9 +86,10 @@
                   class="px-2"
                 >
                   <v-rating
-                    v-model="hotel.star_rating"
+                    :model-value="hotel.star_rating"
                     density="compact"
                     color="secondary-darken-1"
+                    disabled
                   />
                 </v-col>
               </v-row>
