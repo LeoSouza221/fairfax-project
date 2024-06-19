@@ -1,141 +1,133 @@
 <template>
   <v-container>
-    <v-card
+    <HotelDetail
+      v-model="detailModalIsOpen"
+      :hotel="selectedHotel"
+    />
+    <div
       v-for="hotel in hotelsList"
       :key="hotel.hotel_id"
-      class="my-4"
-      color="primary"
-      rounded="lg"
-      variant="outlined"
+      class="position-relative"
     >
-      <v-row no-gutters>
-        <v-col
-          cols="12"
-          md="2"
-          class="d-flex justify-center align-center"
+      <div class="position-absolute button-position">
+        <v-tooltip
+          location="top"
+          text="Adicionar à comparação"
         >
-          <v-img
-            cover
-            :height="name === 'xs' || name === 'sm' ? '120' : '80'"
-            :aspect-ratio="1"
-            :src="hotel.photo1"
-          />
-        </v-col>
-        <v-col
-          cols="12"
-          md="8"
-          class="d-flex"
-        >
-          <v-row no-gutters>
-            <v-col
-              cols="12"
-              class="px-2"
-            >
-              <span class="text-h6">{{ hotel.hotel_name }}</span>
-            </v-col>
-
+          <template v-slot:activator="{ props }">
+            <v-btn
+              v-bind="props"
+              icon="mdi-plus"
+              color="primary"
+              density="comfortable"
+            ></v-btn>
+          </template>
+        </v-tooltip>
+      </div>
+      <v-card
+        class="my-6"
+        color="primary"
+        rounded="lg"
+        variant="outlined"
+        tonal
+        hover
+        @click="setHotelDetailAndOpenModal(hotel)"
+      >
+        <v-row no-gutters>
+          <v-col
+            cols="12"
+            md="2"
+            class="d-flex justify-center align-center"
+          >
+            <v-img
+              cover
+              :height="name === 'xs' || name === 'sm' ? '120' : '80'"
+              :aspect-ratio="1"
+              :src="hotel.photo1"
+            />
+          </v-col>
+          <v-col
+            cols="12"
+            md="8"
+            class="d-flex"
+          >
             <v-row no-gutters>
               <v-col
                 cols="12"
-                md="4"
                 class="px-2"
               >
-                <span class="text-subtitle-2 text-primary">
-                  Cidade:
-                  <span class="font-weight-light">{{ hotel.city ?? '' }}</span>
-                </span>
+                <span class="text-h6">{{ hotel.hotel_name }}</span>
               </v-col>
-              <v-col
-                cols="12"
-                md="4"
-                class="px-2"
-              >
-                <span class="text-subtitle-2 text-primary">
-                  Avaliações:
-                  <span class="font-weight-light">{{ hotel.number_of_reviews ?? '' }}</span>
-                </span>
-              </v-col>
-              <v-col
-                cols="12"
-                md="4"
-                class="px-2"
-              >
-                <v-rating
-                  v-model="hotel.star_rating"
-                  density="compact"
-                  color="secondary-darken-1"
-                />
-              </v-col>
+
+              <v-row no-gutters>
+                <v-col
+                  cols="12"
+                  md="4"
+                  class="px-2"
+                >
+                  <span class="text-subtitle-2 text-primary">
+                    Cidade:
+                    <span class="font-weight-light">{{ hotel.city ?? '' }}</span>
+                  </span>
+                </v-col>
+                <v-col
+                  cols="12"
+                  md="4"
+                  class="px-2"
+                >
+                  <span class="text-subtitle-2 text-primary">
+                    Avaliações:
+                    <span class="font-weight-light">{{ hotel.number_of_reviews ?? '' }}</span>
+                  </span>
+                </v-col>
+                <v-col
+                  cols="12"
+                  md="4"
+                  class="px-2"
+                >
+                  <v-rating
+                    v-model="hotel.star_rating"
+                    density="compact"
+                    color="secondary-darken-1"
+                  />
+                </v-col>
+              </v-row>
             </v-row>
-          </v-row>
-        </v-col>
-        <v-col
-          cols="12"
-          md="2"
-          class="d-flex justify-center align-center"
-        >
-          <span class="text-h6">{{ getMoneyFormat(hotel.price) }}</span>
-        </v-col>
-      </v-row>
-    </v-card>
+          </v-col>
+          <v-col
+            cols="12"
+            md="2"
+            class="d-flex justify-end align-center"
+          >
+            <span class="text-h6 mx-3">{{ getMoneyFormat(hotel.price) }}</span>
+          </v-col>
+        </v-row>
+      </v-card>
+    </div>
   </v-container>
 </template>
 
 <script setup lang="ts">
 import { useDisplay } from 'vuetify';
 import { getMoneyFormat } from '@/helpers/moneyFormat';
+import type { Hotel } from '@/@types';
 import hotels from '@/helpers/hotels.json';
 
-interface Hotel {
-  price: number;
-  available_rooms: number;
-  hotel_id: number;
-  chain_id: number;
-  chain_name: string;
-  brand_id: number;
-  brand_name: string;
-  hotel_name: string;
-  hotel_formerly_name: string;
-  hotel_translated_name: string;
-  addressline1: string;
-  addressline2: string;
-  zipcode: string;
-  city: string;
-  state: string;
-  country: string;
-  countryisocode: string;
-  star_rating: number;
-  longitude: number;
-  latitude: number;
-  url: string;
-  checkin: string;
-  checkout: string;
-  numberrooms: number | null;
-  numberfloors: number | null;
-  yearopened: number | null;
-  yearrenovated: number | null;
-  photo1: string;
-  photo2: string;
-  photo3: string;
-  photo4: string;
-  photo5: string;
-  overview: string;
-  rates_from: number;
-  continent_id: number;
-  continent_name: string;
-  city_id: number;
-  country_id: number;
-  number_of_reviews: number;
-  rating_average: number;
-  rates_currency: string;
-}
-
-const hotelsList: Hotel[] = hotels;
 const { name } = useDisplay();
+const hotelsList: Hotel[] = hotels;
+const detailModalIsOpen = ref(false);
+let selectedHotel = reactive<Hotel>({});
+
+const setHotelDetailAndOpenModal = (hotel: Hotel) => {
+  selectedHotel = hotel;
+
+  detailModalIsOpen.value = true;
+};
 </script>
 
-<style module lang="postcss">
-.hotelList {
-  @apply flex;
-}
+<style scoped lang="sass">
+.button-position
+  z-index: 1
+  top: -15px
+  right: -15px
 </style>

@@ -1,6 +1,6 @@
 [
   {
-    "available_rooms": 10,
+    "available_rooms": 1,
     "price": 1000,
     "hotel_id": 1,
     "chain_id": 421,
@@ -43,7 +43,7 @@
     "rates_currency": "USD"
   },
   {
-    "available_rooms": 5,
+    "available_rooms": 1,
     "price": 600,
     "hotel_id": 6,
     "chain_id": 0,
@@ -129,7 +129,7 @@
     "rates_currency": "USD"
   },
   {
-    "available_rooms": 76,
+    "available_rooms": 1,
     "price": 250,
     "hotel_id": 13,
     "chain_id": 227,
@@ -215,7 +215,7 @@
     "rates_currency": "USD"
   },
   {
-    "available_rooms": 35,
+    "available_rooms": 1,
     "price": 1200,
     "hotel_id": 16,
     "chain_id": 496,
@@ -258,7 +258,7 @@
     "rates_currency": "USD"
   },
   {
-    "available_rooms": 43,
+    "available_rooms": 1,
     "price": 233,
     "hotel_id": 17,
     "chain_id": 0,
@@ -301,7 +301,7 @@
     "rates_currency": "USD"
   },
   {
-    "available_rooms": 4,
+    "available_rooms": 1,
     "price": 763,
     "hotel_id": 18,
     "chain_id": 0,
@@ -344,7 +344,7 @@
     "rates_currency": "USD"
   },
   {
-    "available_rooms": 5,
+    "available_rooms": 1,
     "price": 437,
     "hotel_id": 25,
     "chain_id": 2688,
@@ -387,7 +387,7 @@
     "rates_currency": "USD"
   },
   {
-    "available_rooms": 23,
+    "available_rooms": 1,
     "price": 543,
     "hotel_id": 33,
     "chain_id": 3,
@@ -430,7 +430,7 @@
     "rates_currency": "USD"
   },
   {
-    "available_rooms": 21,
+    "available_rooms": 1,
     "price": 865,
     "hotel_id": 34,
     "chain_id": 0,
@@ -473,7 +473,7 @@
     "rates_currency": "USD"
   },
   {
-    "available_rooms": 8,
+    "available_rooms": 1,
     "price": 5423,
     "hotel_id": 36,
     "chain_id": 0,
@@ -516,7 +516,7 @@
     "rates_currency": "USD"
   },
   {
-    "available_rooms": 10,
+    "available_rooms": 2,
     "price": 3344,
     "hotel_id": 37,
     "chain_id": 0,
@@ -559,7 +559,7 @@
     "rates_currency": "USD"
   },
   {
-    "available_rooms": 5,
+    "available_rooms": 1,
     "price": 2233,
     "hotel_id": 38,
     "chain_id": 0,
@@ -602,7 +602,7 @@
     "rates_currency": "USD"
   },
   {
-    "available_rooms": 12,
+    "available_rooms": 2,
     "price": 982,
     "hotel_id": 54,
     "chain_id": 0,
@@ -645,7 +645,7 @@
     "rates_currency": "USD"
   },
   {
-    "available_rooms": 24,
+    "available_rooms": 1,
     "price": 1442,
     "hotel_id": 59,
     "chain_id": 311,
@@ -688,7 +688,7 @@
     "rates_currency": "USD"
   },
   {
-    "available_rooms": 9,
+    "available_rooms": 1,
     "price": 666,
     "hotel_id": 63,
     "chain_id": 0,
@@ -731,7 +731,7 @@
     "rates_currency": "USD"
   },
   {
-    "available_rooms": 7,
+    "available_rooms": 1,
     "price": 2234,
     "hotel_id": 66,
     "chain_id": 0,
@@ -774,7 +774,7 @@
     "rates_currency": "USD"
   },
   {
-    "available_rooms": 1,
+    "available_rooms": 3,
     "price": 10000,
     "hotel_id": 69,
     "chain_id": 14,
@@ -817,7 +817,7 @@
     "rates_currency": "USD"
   },
   {
-    "available_rooms": 10,
+    "available_rooms": 1,
     "price": 1000,
     "hotel_id": 71,
     "chain_id": 0,
@@ -860,7 +860,7 @@
     "rates_currency": "USD"
   },
   {
-    "available_rooms": 9,
+    "available_rooms": 1,
     "price": 644,
     "hotel_id": 75,
     "chain_id": 74,
@@ -903,7 +903,7 @@
     "rates_currency": "USD"
   },
   {
-    "available_rooms": 4,
+    "available_rooms": 1,
     "price": 2356,
     "hotel_id": 78,
     "chain_id": 161,
@@ -946,7 +946,7 @@
     "rates_currency": "USD"
   },
   {
-    "available_rooms": 7,
+    "available_rooms": 1,
     "price": 443,
     "hotel_id": 85,
     "chain_id": 252,
@@ -989,7 +989,7 @@
     "rates_currency": "USD"
   },
   {
-    "available_rooms": 9,
+    "available_rooms": 1,
     "price": 2234,
     "hotel_id": 94,
     "chain_id": 0,
@@ -1032,7 +1032,7 @@
     "rates_currency": "USD"
   },
   {
-    "available_rooms": 6,
+    "available_rooms": 1,
     "price": 832,
     "hotel_id": 97,
     "chain_id": 307,
@@ -1075,7 +1075,7 @@
     "rates_currency": "USD"
   },
   {
-    "available_rooms": 4,
+    "available_rooms": 1,
     "price": 877,
     "hotel_id": 99,
     "chain_id": 0,
@@ -1118,7 +1118,7 @@
     "rates_currency": "USD"
   },
   {
-    "available_rooms": 8,
+    "available_rooms": 2,
     "price": 367,
     "hotel_id": 102,
     "chain_id": 193,
@@ -1161,7 +1161,7 @@
     "rates_currency": "USD"
   },
   {
-    "available_rooms": 7,
+    "available_rooms": 1,
     "price": 332,
     "hotel_id": 103,
     "chain_id": 241,
@@ -1204,7 +1204,7 @@
     "rates_currency": "USD"
   },
   {
-    "available_rooms": 5,
+    "available_rooms": 1,
     "price": 2499,
     "hotel_id": 107,
     "chain_id": 16,
@@ -1247,7 +1247,7 @@
     "rates_currency": "USD"
   },
   {
-    "available_rooms": 2,
+    "available_rooms": 1,
     "price": 123,
     "hotel_id": 109,
     "chain_id": 661,
@@ -1290,7 +1290,7 @@
     "rates_currency": "USD"
   },
   {
-    "available_rooms": 2,
+    "available_rooms": 1,
     "price": 210,
     "hotel_id": 122,
     "chain_id": 307,
@@ -1333,7 +1333,7 @@
     "rates_currency": "USD"
   },
   {
-    "available_rooms": 34,
+    "available_rooms": 1,
     "price": 235,
     "hotel_id": 123,
     "chain_id": 0,
@@ -1376,7 +1376,7 @@
     "rates_currency": "USD"
   },
   {
-    "available_rooms": 7,
+    "available_rooms": 2,
     "price": 6400,
     "hotel_id": 124,
     "chain_id": 94,
@@ -1419,7 +1419,7 @@
     "rates_currency": "USD"
   },
   {
-    "available_rooms": 10,
+    "available_rooms": 1,
     "price": 1980,
     "hotel_id": 127,
     "chain_id": 911,
@@ -1505,7 +1505,7 @@
     "rates_currency": "USD"
   },
   {
-    "available_rooms": 23,
+    "available_rooms": 2,
     "price": 414,
     "hotel_id": 131,
     "chain_id": 229,
@@ -1591,7 +1591,7 @@
     "rates_currency": "USD"
   },
   {
-    "available_rooms": 11,
+    "available_rooms": 1,
     "price": 1001,
     "hotel_id": 135,
     "chain_id": 0,
@@ -1634,7 +1634,7 @@
     "rates_currency": "USD"
   },
   {
-    "available_rooms": 12,
+    "available_rooms": 1,
     "price": 432,
     "hotel_id": 136,
     "chain_id": 750,
@@ -1677,7 +1677,7 @@
     "rates_currency": "USD"
   },
   {
-    "available_rooms": 3,
+    "available_rooms": 1,
     "price": 80,
     "hotel_id": 138,
     "chain_id": 0,
@@ -1720,7 +1720,7 @@
     "rates_currency": "USD"
   },
   {
-    "available_rooms": 11,
+    "available_rooms": 1,
     "price": 2040,
     "hotel_id": 140,
     "chain_id": 0,
@@ -1763,7 +1763,7 @@
     "rates_currency": "USD"
   },
   {
-    "available_rooms": 16,
+    "available_rooms": 1,
     "price": 1991,
     "hotel_id": 141,
     "chain_id": 0,
@@ -1806,7 +1806,7 @@
     "rates_currency": "USD"
   },
   {
-    "available_rooms": 65,
+    "available_rooms": 1,
     "price": 569,
     "hotel_id": 146,
     "chain_id": 0,
@@ -1849,7 +1849,7 @@
     "rates_currency": "USD"
   },
   {
-    "available_rooms": 33,
+    "available_rooms": 2,
     "price": 2111,
     "hotel_id": 147,
     "chain_id": 0,
@@ -1892,7 +1892,7 @@
     "rates_currency": "USD"
   },
   {
-    "available_rooms": 10,
+    "available_rooms": 1,
     "price": 609,
     "hotel_id": 149,
     "chain_id": 21,
@@ -1935,7 +1935,7 @@
     "rates_currency": "USD"
   },
   {
-    "available_rooms": 17,
+    "available_rooms": 1,
     "price": 170,
     "hotel_id": 150,
     "chain_id": 16,
@@ -1978,7 +1978,7 @@
     "rates_currency": "USD"
   },
   {
-    "available_rooms": 13,
+    "available_rooms": 1,
     "price": 800,
     "hotel_id": 151,
     "chain_id": 0,

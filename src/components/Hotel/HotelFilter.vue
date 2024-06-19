@@ -5,10 +5,9 @@
       md="6"
       cols="12"
     >
-      <!-- <v-date-input v-model="filters.checkIn"></v-date-input> -->
       <v-text-field
-        v-model="filters.bedrooms"
-        label="Quartos"
+        v-model="filters.city"
+        label="Destino"
         variant="outlined"
         color="primary"
         density="compact"
@@ -19,7 +18,6 @@
       md="6"
       cols="12"
     >
-      <!-- <v-date-input v-model="filters.checkOut"></v-date-input> -->
       <v-text-field
         v-model="filters.bedrooms"
         label="Quartos"
@@ -34,12 +32,13 @@
       cols="12"
     >
       <v-text-field
-        v-model="filters.bedrooms"
+        v-model="filters.minPrice"
         type="number"
-        label="Quartos"
+        label="Preço Mínimo"
         variant="outlined"
         color="primary"
         density="compact"
+        prefix="R$"
       ></v-text-field>
     </v-col>
     <v-col
@@ -48,12 +47,13 @@
       cols="12"
     >
       <v-text-field
-        v-model="filters.guests"
+        v-model="filters.maxPrice"
         type="number"
-        label="Hospedes"
+        label="Preço Máximo"
         variant="outlined"
         color="primary"
         density="compact"
+        prefix="R$"
       ></v-text-field>
     </v-col>
     <v-col
@@ -76,9 +76,9 @@
 
 <script setup lang="ts">
 const filters = reactive({
-  checkIn: '',
-  checkOut: '',
+  city: '',
   bedrooms: 0,
-  guests: 0,
+  minPrice: 0,
+  maxPrice: 0,
 });
 </script>
