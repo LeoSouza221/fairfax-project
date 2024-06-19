@@ -11,8 +11,8 @@ const customTheme: ThemeDefinition = {
     surface: '#FFFFFF',
     primary: '#6200EE',
     'primary-darken-1': '#3700B3',
-    secondary: '#03DAC6',
-    'secondary-darken-1': '#018786',
+    secondary: '#FFE0B2',
+    'secondary-darken-1': '#F57C00',
     error: '#B00020',
     info: '#2196F3',
     success: '#4CAF50',
@@ -21,8 +21,8 @@ const customTheme: ThemeDefinition = {
 };
 
 export default createVuetify({
-  components,
-  directives,
+  ...components,
+  ...directives,
   theme: {
     defaultTheme: 'customTheme',
     themes: {
