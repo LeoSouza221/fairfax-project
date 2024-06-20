@@ -13,7 +13,15 @@ export const useNotificationStore = defineStore('notification', {
       setTimeout(() => {
         this.notifications.push(`Reserva no hotel ${hotelName} criada com sucesso`);
         this.notificationQuantity += 1;
-      }, 10000);
+      }, 5000);
+    },
+
+    cleanNotifications() {
+      this.notificationQuantity = 0;
+    },
+
+    removeNotification(index: number) {
+      this.notifications.splice(index, 1);
     },
   },
 });

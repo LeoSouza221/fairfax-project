@@ -14,18 +14,25 @@
         ></v-icon>
       </RouterLink>
     </template>
-    <v-app-bar-title data-test="header-text ma-0">Fairfax Hotéis</v-app-bar-title>
+    <v-app-bar-title data-test="header-text ma-0">
+      <RouterLink
+        to="/"
+        class="text-white text-decoration-none"
+      >
+        Fairfax Hotéis
+      </RouterLink>
+    </v-app-bar-title>
     <template v-slot:append>
       <v-btn
         v-if="hotelComparationList.length > 1"
-        icon="mdi-card-multiple"
+        icon
         to="/HotelComparation"
       >
         <v-badge
           color="secondary-darken-1"
           :content="hotelComparationList.length"
         >
-          <v-icon>mdi-bell-outline</v-icon>
+          <v-icon>mdi-card-multiple</v-icon>
         </v-badge>
       </v-btn>
 
