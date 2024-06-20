@@ -9,12 +9,15 @@ declare module 'vue' {
   export interface GlobalComponents {
     AppFooter: typeof import('./components/template/AppFooter.vue')['default']
     AppHeader: typeof import('./components/template/AppHeader.vue')['default']
+    AppNotification: typeof import('./components/AppNotification.vue')['default']
     CurrencyInput: typeof import('./components/CurrencyInput.vue')['default']
     HelloWorld: typeof import('./components/HelloWorld.vue')['default']
     HotelDetail: typeof import('./components/HotelDetail.vue')['default']
     HotelFilter: typeof import('./components/HotelHome/HotelFilter.vue')['default']
     HotelList: typeof import('./components/HotelHome/HotelList.vue')['default']
     HotelModalDetail: typeof import('./components/HotelHome/HotelModalDetail.vue')['default']
+    Notication: typeof import('./components/Notication.vue')['default']
+    Notification: typeof import('./components/Notification.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }

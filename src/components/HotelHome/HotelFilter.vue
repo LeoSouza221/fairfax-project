@@ -55,12 +55,12 @@
     >
       <v-btn
         color="secondary-darken-1"
-        prepend-icon="mdi-filter"
+        prepend-icon="mdi-magnify"
         variant="flat"
         height="40"
         block
       >
-        Filtrar
+        Pesquisar
       </v-btn>
     </v-col>
   </v-row>

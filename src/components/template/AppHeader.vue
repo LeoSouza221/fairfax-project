@@ -6,18 +6,18 @@
     class="position-fixed"
   >
     <template v-slot:prepend>
-      <v-btn
-        icon="mdi-eiffel-tower"
-        class="ml-4"
-        plain
-        :ripple="false"
-        to="/"
-      >
-      </v-btn>
+      <RouterLink to="/">
+        <v-icon
+          color="white"
+          icon="mdi-eiffel-tower"
+          class="ml-4"
+        ></v-icon>
+      </RouterLink>
     </template>
     <v-app-bar-title data-test="header-text ma-0">Fairfax Hotéis</v-app-bar-title>
     <template v-slot:append>
       <v-btn
+        v-if="hotelComparationList.length > 1"
         icon="mdi-card-multiple"
         to="/HotelComparation"
       >
@@ -28,6 +28,8 @@
           <v-icon>mdi-bell-outline</v-icon>
         </v-badge>
       </v-btn>
+
+      <AppNotification />
     </template>
   </v-app-bar>
 </template>
@@ -36,6 +38,5 @@
 import { useHotelStore } from '@/stores/hotel';
 import { storeToRefs } from 'pinia';
 
-const store = useHotelStore();
-const { hotelComparationList } = storeToRefs(store);
+const { hotelComparationList } = storeToRefs(useHotelStore());
 </script>
