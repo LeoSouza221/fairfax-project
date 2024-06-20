@@ -20,13 +20,52 @@
 import type { SortingOptions } from '@/@types';
 import hotels from '@/helpers/hotels.json';
 
-const hotelsList = reactive([...hotels]);
+let hotelsList = reactive([...hotels]);
 
 const sortHotels = (sortOption: SortingOptions) => {
-  const teste = hotelsList.sort((hotelA, hotelB) => {
-    return hotelA[sortOption.value] - hotelB[sortOption.value];
-  });
+  if (sortOption.value === 'city') {
+    hotelsList = sortByString(sortOption);
 
-  console.log(teste);
+    return;
+  }
+
+  hotelsList = sortByNumber(sortOption);
+};
+
+const sortByString = (sortOption: SortingOptions) => {
+  return hotelsList.sort((hotelA, hotelB) => {
+    if (sortOption.sort === 'asc') {
+      //@ts-ignore
+      if (hotelA[sortOption.value] > hotelB[sortOption.value]) {
+        return -1;
+      }
+      //@ts-ignore
+      if (hotelB[sortOption.value] < hotelA[sortOption.value]) {
+        return 1;
+      }
+      return 0;
+    } else {
+      //@ts-ignore
+      if (hotelA[sortOption.value] < hotelB[sortOption.value]) {
+        return -1;
+      }
+      //@ts-ignore
+      if (hotelB[sortOption.value] > hotelA[sortOption.value]) {
+        return 1;
+      }
+      return 0;
+    }
+  });
+};
+
+const sortByNumber = (sortOption: SortingOptions) => {
+  return hotelsList.sort((hotelA, hotelB) => {
+    if (sortOption.sort === 'asc') {
+      //@ts-ignore
+      return hotelA[sortOption.value] - hotelB[sortOption.value];
+    }
+    //@ts-ignore
+    return hotelB[sortOption.value] - hotelA[sortOption.value];
+  });
 };
 </script>
