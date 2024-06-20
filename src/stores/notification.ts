@@ -10,8 +10,10 @@ export const useNotificationStore = defineStore('notification', {
 
   actions: {
     addNotification(hotelName: string) {
-      this.notifications.push(`Reserva no hotel ${hotelName} criada com sucesso`);
-      this.notificationQuantity += 1;
+      setTimeout(() => {
+        this.notifications.push(`Reserva no hotel ${hotelName} criada com sucesso`);
+        this.notificationQuantity += 1;
+      }, 10000);
     },
   },
 });
