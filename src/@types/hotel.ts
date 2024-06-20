@@ -47,4 +47,6 @@ interface HotelStore {
   selectedHotel: Hotel;
 }
 
-export type { Hotel, HotelStore };
+type HotelKeys = keyof Hotel;
+
+export type { Hotel, HotelStore, HotelKeys };

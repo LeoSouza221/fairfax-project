@@ -137,9 +137,12 @@
 import { useDisplay } from 'vuetify';
 import { getMoneyFormat } from '@/helpers/moneyFormat';
 import type { Hotel } from '@/@types';
-import hotels from '@/helpers/hotels.json';
 import { useHotelStore } from '@/stores/hotel';
 import { storeToRefs } from 'pinia';
+
+defineProps<{
+  hotelsList: Hotel[];
+}>();
 
 const store = useHotelStore();
 const { addHotelToComparation, removeHotelToComparation } = store;
@@ -147,12 +150,11 @@ const { hotelComparationList } = storeToRefs(store);
 
 const { name } = useDisplay();
 
-const hotelsList: Hotel[] = hotels;
 const detailModalIsOpen = ref(false);
 const alertIsOpen = ref(false);
 const loading = ref(false);
 const alertMessage = ref('');
-let selectedHotel = reactive<Hotel>({});
+let selectedHotel = reactive<Hotel>({} as Hotel);
 
 const setHotelDetailAndOpenModal = (hotel: Hotel) => {
   selectedHotel = hotel;
