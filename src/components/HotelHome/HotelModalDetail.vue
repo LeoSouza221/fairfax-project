@@ -27,7 +27,7 @@
           color="secondary-darken-1"
           variant="flat"
           height="40"
-          to="/HotelReservation"
+          @click="selectHotelAndCheckout"
         ></v-btn>
       </template>
     </v-card>
@@ -36,6 +36,12 @@
 
 <script setup lang="ts">
 import { Hotel } from '@/@types';
+import { useHotelStore } from '@/stores/hotel';
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
+const store = useHotelStore();
+const { addToSelectedHotel } = store;
 
 const props = defineProps<{
   modelValue: boolean;
@@ -52,4 +58,9 @@ const dialog = computed({
     emit('update:modelValue', newValue);
   },
 });
+
+const selectHotelAndCheckout = () => {
+  addToSelectedHotel(props.hotel);
+  router.push('/HotelReservation');
+};
 </script>

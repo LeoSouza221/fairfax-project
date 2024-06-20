@@ -1,14 +1,11 @@
 // Utilities
 import { defineStore } from 'pinia';
-import type { Hotel } from '@/@types';
-
-interface HotelStore {
-  hotelComparationList: Hotel[];
-}
+import type { Hotel, HotelStore } from '@/@types';
 
 export const useHotelStore = defineStore('hotel', {
   state: (): HotelStore => ({
     hotelComparationList: [],
+    selectedHotel: {} as Hotel,
   }),
 
   actions: {
@@ -25,6 +22,9 @@ export const useHotelStore = defineStore('hotel', {
     },
     removeHotelToComparation(index: number) {
       this.hotelComparationList.splice(index, 1);
+    },
+    addToSelectedHotel(hotel: Hotel) {
+      this.selectedHotel = hotel;
     },
   },
 

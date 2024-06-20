@@ -42,4 +42,9 @@ interface Hotel {
   rates_currency: string;
 }
 
-export type { Hotel };
+interface HotelStore {
+  hotelComparationList: Hotel[];
+  selectedHotel: Hotel;
+}
+
+export type { Hotel, HotelStore };
