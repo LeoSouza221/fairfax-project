@@ -6,7 +6,6 @@
           icon="mdi-bell"
           v-bind="props"
           @click="cleanNotifications"
-          ref="notificationButton"
         >
           <v-badge
             color="secondary-darken-1"
