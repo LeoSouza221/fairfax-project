@@ -9,6 +9,7 @@
       <v-btn
         icon="mdi-filter-menu"
         flat
+        variant="text"
         color="secondary-darken-1"
         v-bind="props"
       >
