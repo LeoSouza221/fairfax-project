@@ -76,4 +76,5 @@ export default defineConfig({
     },
     setupFiles: ['./setup.ts'],
   },
+  base: '/fairfax-project/',
 });

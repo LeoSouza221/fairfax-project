@@ -144,6 +144,7 @@ import { storeToRefs } from 'pinia';
 
 defineProps<{
   hotelsList: Hotel[];
+  loadingHotels: boolean;
 }>();
 
 const store = useHotelStore();
