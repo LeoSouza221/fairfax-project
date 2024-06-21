@@ -57,6 +57,7 @@ defineEmits(['validate']);
 
 const validateForm = computed(() => {
   const teste = Object.keys(userInfo).some((key) => {
+    // @ts-ignore
     return !userInfo[key];
   });
 
