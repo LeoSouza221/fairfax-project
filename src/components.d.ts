@@ -15,7 +15,6 @@ declare module 'vue' {
     HotelFilter: typeof import('./components/HotelHome/HotelFilter.vue')['default']
     HotelList: typeof import('./components/HotelHome/HotelList.vue')['default']
     HotelModalDetail: typeof import('./components/HotelHome/HotelModalDetail.vue')['default']
-    HotelOrdering: typeof import('./components/HotelHome/HotelOrdering.vue')['default']
     HotelSort: typeof import('./components/HotelHome/HotelSort.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
