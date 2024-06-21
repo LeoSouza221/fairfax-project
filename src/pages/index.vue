@@ -5,7 +5,10 @@
 
       <div class="py-4" />
 
-      <HotelFilter @filter-hotels="filterHotels" />
+      <HotelFilter
+        :loading-hotels="loading"
+        @filter-hotels="filterHotels"
+      />
       <div class="d-flex justify-space-between align-end">
         <span class="text-secondary-darken-1">{{ hotelsList.length }} Resultados</span>
         <HotelSort
