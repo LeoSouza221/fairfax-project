@@ -10,6 +10,7 @@
           <v-badge
             color="secondary-darken-1"
             :content="notificationQuantity"
+            data-test="notification-quantity"
           >
             <v-icon>mdi-bell-outline</v-icon>
           </v-badge>

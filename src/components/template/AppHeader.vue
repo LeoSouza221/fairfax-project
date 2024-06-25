@@ -14,7 +14,7 @@
         ></v-icon>
       </RouterLink>
     </template>
-    <v-app-bar-title data-test="header-text ma-0">
+    <v-app-bar-title data-test="header-text">
       <RouterLink
         to="/"
         class="text-white text-decoration-none"
