@@ -1,7 +1,7 @@
-import { mount } from '@vue/test-utils';
+// import { mount } from '@vue/test-utils';
 import { expect, test, beforeEach } from 'vitest';
 import { setActivePinia, createPinia } from 'pinia';
-import AppHeader from '../template/AppHeader.vue';
+// import AppHeader from '../template/AppHeader.vue';
 
 global.ResizeObserver = require('resize-observer-polyfill');
 
