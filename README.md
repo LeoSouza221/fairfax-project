@@ -40,11 +40,11 @@ Até a presente data o projeto conta com as seguintes features implementadas
 - **Comparar hotéis**: Quando há pelo menos 2 hoteis adicionados à lista de comparações um ícone ira aparecer no header da página, ao clica-lo o usuário será redirecionado para a tela de comparação de hotéis, onde poderá ver as informações detalhadas dos hotéis e compara-las entre si.
 - **Filtragem de hotéis**: Na home, juntamente com a listagem de hotéis na parte superior da página há também filtros que podem ser aplicados para encontrar hoteis com caracteristicas especificas, o usuário pode usar até 4 filtros, sendo eles: Cidade, Quantidade de quartos, Preço mínimo e Preço máximo 
 - **Ordenação de hotéis**: Na home, juntamente com a listagem de hotéis, entre a listagem e a filtragem de hotéis, há um icone de ordenação, que ao ser clicado o usuário poderá ver opções para o ordenação de hotéis, sendo elas: Cidade, Avaliação, Quantidade de avaliação e Preço
+- **Requisição fake (mock)**: Ao entrar na home, realizar uma ordenação ou filtrar um hotel ou entrar na página de comparação de hoteis, esta sendo um feita uma requisição fake (uma promise), que retorna a lista correta de items após 2 segundos
 
 ## Requisitos Faltando
 Devido ao prazo apertado para a realização do projeto (3 dias) alguns requisitos acabaram ficando de fora da atual versão
 
-- **Requisição fake (mock)**: Ainda pretendo criar uma promise para mockar essas requisições
 - **Documentação completa**: Não consegui detalhar da forma que queria a documentação
 - **Testes**
 
