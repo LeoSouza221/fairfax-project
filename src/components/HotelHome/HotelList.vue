@@ -10,8 +10,21 @@
     >
       {{ alertMessage }}
     </v-snackbar>
+
     <TransitionGroup name="list">
       <div
+        v-if="loadingHotels"
+        class="d-flex justify-center"
+      >
+        <v-progress-circular
+          :size="80"
+          color="primary"
+          indeterminate
+        ></v-progress-circular>
+      </div>
+
+      <div
+        v-else
         v-for="hotel in hotelsList"
         :key="hotel.hotel_id"
         class="position-relative"

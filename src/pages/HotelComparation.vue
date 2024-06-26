@@ -9,9 +9,23 @@
     </div>
 
     <v-divider></v-divider>
-    <v-row>
+    <div
+      v-if="loading"
+      class="d-flex justify-center pa-3"
+    >
+      <v-progress-circular
+        class="mt"
+        :size="80"
+        color="primary"
+        indeterminate
+      ></v-progress-circular>
+    </div>
+    <v-row
+      v-else
+      justify="center"
+    >
       <v-col
-        v-for="hotel in hotelComparationList"
+        v-for="hotel in hotelList"
         :key="hotel.hotel_id"
         class="d-flex"
         cols="12"
@@ -37,7 +51,27 @@
 <script setup lang="ts">
 import { useHotelStore } from '@/stores/hotel';
 import { storeToRefs } from 'pinia';
+import { useMockFetch } from '@/composables/useMockFetch';
+import type { Hotel } from '@/@types';
 
 const store = useHotelStore();
 const { hotelComparationList } = storeToRefs(store);
+const loading = ref(false);
+const hotelList = ref<Hotel[]>([]);
+
+onMounted(() => {
+  getComparationList();
+});
+
+const getComparationList = () => {
+  loading.value = true;
+  useMockFetch(hotelComparationList.value)
+    .then((response) => {
+      hotelList.value = response;
+    })
+    .catch((error) => console.error(error))
+    .finally(() => {
+      loading.value = false;
+    });
+};
 </script>

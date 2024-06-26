@@ -27,29 +27,43 @@
 </template>
 
 <script lang="ts" setup>
-import type { SortingOptions, FilterOptions } from '@/@types';
+import type { SortingOptions, FilterOptions, Hotel } from '@/@types';
+import { useMockFetch } from '@/composables/useMockFetch';
 import hotels from '@/helpers/hotels.json';
 
 const loading = ref(false);
-const hotelsList = ref([...hotels]);
+const hotelsList = ref<Hotel[]>([]);
 const localSorting = ref<SortingOptions>({
   name: 'Cidade',
   value: 'city',
   sort: 'asc',
 });
 
-const sortHotels = (sortOption: SortingOptions) => {
+onMounted(() => {
+  getHotels();
+});
+
+const getHotels = (hotelList?: Hotel[]) => {
   loading.value = true;
+  useMockFetch(hotelList ?? hotels)
+    .then((response) => {
+      hotelsList.value = response;
+    })
+    .catch((error) => console.error(error))
+    .finally(() => {
+      loading.value = false;
+    });
+};
+
+const sortHotels = (sortOption: SortingOptions) => {
   localSorting.value = sortOption;
   if (sortOption.value === 'city') {
-    hotelsList.value = sortByString(sortOption);
-    loading.value = false;
+    getHotels(sortByString(sortOption));
 
     return;
   }
 
-  loading.value = false;
-  hotelsList.value = sortByNumber(sortOption);
+  getHotels(sortByNumber(sortOption));
 };
 
 const sortByString = (sortOption: SortingOptions) => {
